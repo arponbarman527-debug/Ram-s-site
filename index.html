@@ -8,6 +8,7 @@
     <meta name="google-site-verification" content="b2b4gw2tKCJuuOiaYR6PSyXOWs3xlKbRfCGWvH6fEUM" />
     <title>Om namah Shivay</title>
     <style>
+        /* পুরো ওয়েবসাইটের সাধারণ ডিজাইন */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -16,54 +17,76 @@
             color: #333;
             text-align: center;
         }
+
+        /* হেডার যেখানে ছবিটি ব্যাকগ্রাউন্ড হিসেবে থাকবে */
         header {
-            background-color: #2c3e50;
+            /* ছবির নামের স্পেসের জন্য %20 ব্যবহার করা হয়েছে */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('atar%20color%20thik%20kora.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* স্ক্রল করার সময় সুন্দর ইফেক্ট দিবে */
             color: white;
-            padding: 50px 20px;
+            padding: 120px 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* সেকশন গুলোর ডিজাইন */
         section {
-            padding: 40px 20px;
+            padding: 60px 20px;
             max-width: 800px;
             margin: auto;
         }
+
         .skills span {
             background: #3498db;
             color: white;
-            padding: 5px 15px;
+            padding: 8px 18px;
             border-radius: 20px;
             margin: 5px;
             display: inline-block;
+            font-weight: bold;
         }
+
         .project-card {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             margin-top: 20px;
         }
+
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #e74c3c;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
         }
+
+        button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
         footer {
             background: #2c3e50;
             color: white;
-            padding: 20px;
+            padding: 30px;
             margin-top: 50px;
-        }
-        img {
-            border: 5px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
+    <!-- ছবির ব্যাকগ্রাউন্ড সহ হেডার অংশ -->
     <header>
         <h1>স্বাগতম, আমি Arpon Barman Ram</h1>
         <p>আমি বিজ্ঞান বিভাগে পড়াশোনা করছি এবং কোডিং করতে ভালোবাসি।</p>
@@ -72,13 +95,6 @@
     <section id="about">
         <h2>আমার সম্পর্কে</h2>
         <p>আমি বর্তমানে কলেজে পড়াশোনা করছি। পড়াশোনার পাশাপাশি আমি ওয়েবসাইট তৈরি করা, গেম খেলা এবং বাগান করতে পছন্দ করি।</p>
-    </section>
-
-    <!-- গ্যালারি সেকশন এখন সঠিক জায়গায় আছে -->
-    <section id="gallery">
-        <h2>আমার গ্যালারি</h2>
-        <img src="atar%20color%20thik%20kora.png" alt="আমার ছবি" style="width: 100%; max-width: 500px; border-radius: 10px;">
-        <p>এটি আমাদের একটি সুন্দর মুহূর্তের ছবি।</p>
     </section>
 
     <section id="skills">
