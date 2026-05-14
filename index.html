@@ -7,8 +7,9 @@
     <meta name="keywords" content="Arpon Barman, Ram's site, Web Developer Bangladesh">
     <meta name="google-site-verification" content="b2b4gw2tKCJuuOiaYR6PSyXOWs3xlKbRfCGWvH6fEUM" />
     <title>Om namah Shivay</title>
+    
     <style>
-        /* পুরো ওয়েবসাইটের সাধারণ ডিজাইন */
+        /* পুরো ওয়েবসাইটের সাধারণ ডিজাইন */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -18,13 +19,11 @@
             text-align: center;
         }
 
-        /* হেডার যেখানে ছবিটি ব্যাকগ্রাউন্ড হিসেবে থাকবে */
         header {
-            /* ছবির নামের স্পেসের জন্য %20 ব্যবহার করা হয়েছে */
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('atar%20color%20thik%20kora.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* স্ক্রল করার সময় সুন্দর ইফেক্ট দিবে */
+            background-attachment: fixed;
             color: white;
             padding: 120px 20px;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
@@ -35,7 +34,6 @@
             margin-bottom: 10px;
         }
 
-        /* সেকশন গুলোর ডিজাইন */
         section {
             padding: 60px 20px;
             max-width: 800px;
@@ -82,56 +80,68 @@
             padding: 30px;
             margin-top: 50px;
         }
+
+        /* ৩ লাইনের আইকনের স্টাইল - কালার সাদা করা হয়েছে */
+        .menu-icon {
+            font-size: 35px;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: white; /* এখানে সাদা রঙ দেওয়া হয়েছে */
+            z-index: 2;
+        }
+
+        /* সাইডবার ডিজাইন */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: left; /* মেনুর টেক্সট বাম দিকে রাখার জন্য */
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: white;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
     </style>
-    
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: white;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-</style>
 </head>
 <body>
-<!-- মেনু আইকন এবং সাইডবার -->
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="projects.html">Projects</a>
 
-</div>
+    <!-- ৩ লাইনের মেনু বাটন (এখানে ইনলাইন স্টাইল সরানো হয়েছে যাতে CSS কাজ করে) -->
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
 
-<!-- ৩ লাইনের মেনু বাটন -->
-<span style="font-size:30px;cursor:pointer;position:absolute;top:10px;left:10px;" onclick="openNav()">&#9776;</span>
-    <!-- ছবির ব্যাকগ্রাউন্ড সহ হেডার অংশ -->
+    <!-- সাইডবার প্যানেল -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+    </div>
+
     <header>
         <h1>স্বাগতম, আমি Arpon Barman Ram</h1>
         <p>আমি বিজ্ঞান বিভাগে পড়াশোনা করছি এবং কোডিং করতে ভালোবাসি।</p>
@@ -141,11 +151,13 @@
         <h2>আমার সম্পর্কে</h2>
         <p>আমি বর্তমানে কলেজে পড়াশোনা করছি। পড়াশোনার পাশাপাশি আমি ওয়েবসাইট তৈরি করা, গেম খেলা এবং বাগান করতে পছন্দ করি।</p>
     </section>
-<section id="gallery">
+
+    <section id="gallery">
         <h2>আমার গ্যালারি</h2>
         <img src="atar%20color%20thik%20kora.png" alt="আমার ছবি" style="width: 100%; max-width: 500px; border-radius: 10px;">
         <p>এটি আমাদের একটি সুন্দর মুহূর্তের ছবি।</p>
     </section>
+
     <section id="skills">
         <h2>আমার দক্ষতা (Skills)</h2>
         <div class="skills">
@@ -167,23 +179,22 @@
     </section>
 
     <footer>
-        <p>যোগাযোগ: <a href="mailto:arponbarman527@gmail.com">arponbarman527@gmail.com</a> | WhatsApp:<a href="https://wa.me/8801798021050"> +8801798021050</a></p>
+        <p>যোগাযোগ: <a href="mailto:arponbarman527@gmail.com" style="color: #3498db;">arponbarman527@gmail.com</a> | WhatsApp:<a href="https://wa.me/8801798021050" style="color: #3498db;"> +8801798021050</a></p>
     </footer>
 
     <script>
         function showAlert() {
             alert("প্রজেক্টটি এখনো তৈরি হচ্ছে! খুব শীঘ্রই আসছে।");
         }
-    </script>
-    <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 
 </body>
 </html>
